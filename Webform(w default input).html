@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>폼</title>
+	</head>
+
+	<body>
+		<form>
+		<table>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name" placeholder="이름을 입력하시오." autofocus></td>
+			</tr>
+			<tr>
+				<td>전화번호</td>
+				<td><input type="text" name="phone" pattern="\d{2,3}-\d{3}-\d{4}$" placeholder="전화번호를 입력하시오." required></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>홈페이지</td>
+				<td><input type="url" name="homepage" placeholder="개인 홈페이지 주소를 입력하시오."></td>
+			</tr>
+			<tr>
+				<td>생년월일</td>
+				<td><input type="date Pickers" name="birthday"></td>
+			</tr>
+			<tr>
+				<td>대학 졸업 년도</td>
+				<td><input type="number" name="graduate" min="1990" max="2020"></td>
+			</tr>
+			<tr>
+				<td>영어 평가 등급</td>
+				<td><input type="range" min="1" max="10" value="5">
+					<output name="ret" onforminput="value=level.value"></output>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>좋아하는 TV 프로그램</td>
+				<td><input type="text" name="site" list="site" placeholder="좋아하는 TV프로그램을 입력하시오.">
+					<datalist id="site">
+						<option value="무한도전">
+						<option value="1박2일">
+						<option value="런닝맨">
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td>좋아하는 색</td>
+				<td><input type="color" name="color"></td>
+			</tr>
+			<tr>
+				<td><keyen name="key">
+				<input type="submit" value="전송">
+				</td>
+			</tr>
+	</table>
+	</form>
+
+</html>
