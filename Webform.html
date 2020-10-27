@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>폼</title>
+	</head>
+
+	<body>
+		<form>
+		<table>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="email" name="email"></td>
+			</tr>
+			<tr>
+				<td>홈페이지</td>
+				<td><input type="url" name="homepage"></td>
+			</tr>
+			<tr>
+				<td>생년월일</td>
+				<td><input type="date Pickers" name="birthday"></td>
+			</tr>
+			<tr>
+				<td>대학 졸업 년도</td>
+				<td><input type="number" name="graduate" min="1990" max="2020"></td>
+			</tr>
+			<tr>
+				<td>영어 평가 등급</td>
+				<td><input type="range" min="1" max="10" value="5">
+					<output name="ret" onforminput="value=level.value"></output>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>좋아하는 TV 프로그램</td>
+				<td><input type="text" name="site" list="site">
+					<datalist id="site">
+						<option value="무한도전">
+						<option value="1박2일">
+						<option value="런닝맨">
+					</datalist>
+				</td>
+			</tr>
+			<tr>
+				<td>좋아하는 색</td>
+				<td><input type="color" name="color"></td>
+			</tr>
+			<tr>
+				<td><keyen name="key">
+				<keyen name="key">
+				</td>
+			</tr>
+	</table>
+	</form>
+
+</html>
