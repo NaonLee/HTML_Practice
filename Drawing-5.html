@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>원 그리기</title>
+		<script type="text/javascript">
+		function arc()
+		{
+			var canvas = document.getElementById('canvas');
+			context = canvas.getContext('2d');
+
+			context.beginPath();
+			context.arc(120,120,100,0,360*Math.PI/180, false);
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 120, 100, 90*Math.PI/180, 360*Math.PI/180, false);
+			context.stroke();
+
+			context.beginPath();
+			context.arc(350, 120, 100, 90*Math.PI/180, 360*Math.PI/180, true);
+			context.fill();
+
+
+
+			context.beginPath();
+			context.moveTo(570,120);
+			context.arc(570, 120, 100, 90*Math.PI/180, 360*Math.PI/180, false);
+			context.closePath();
+			context.stroke();
+
+			context.beginPath();
+			context.moveTo(570,120);
+			context.arc(570, 120, 100, 90*Math.PI/180, 360*Math.PI/180, true);
+			context.closePath();
+			context.fill();
+			
+
+	}
+	
+	</script>
+
+	</head>
+
+	<body onload="arc();">
+		<canvas id="canvas" width="700" height="400" style="border:solid 1px #000000">
+		canvas 사용하기
+		</canvas>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>도형 합성하기</title>
+		<script type="text/javascript">
+		function xor()
+		{
+			var canvas = document.getElementById('canvas');
+			context = canvas.getContext('2d');
+
+			for(var i=0; i<50; i++)
+			{
+				var arcstyle = context.createRadialGradient(i*8,i*8,0,i*5,i*5,300);
+				arcstyle.addColorStop(0, "orange");
+				arcstyle.addColorStop(1,"green");
+				context.fillStyle = arcstyle;
+
+				context.arc(i*10, i*10, 50, 0, 2*Math.PI, true);
+				context.fill();
+
+				context.globalCompositeOperation="xor"
+			}
+				
+	}
+	
+	</script>
+
+	</head>
+
+	<body onload="xor();">
+		<canvas id="canvas" width="700" height="400" style="border:solid 1px #000000">
+		canvas 사용하기
+		</canvas>
+	</body>
+</html>

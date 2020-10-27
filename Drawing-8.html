@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>선 그리기</title>
+		<script type="text/javascript">
+		function line()
+		{
+			var canvas = document.getElementById('canvas');
+			context = canvas.getContext('2d');
+
+			context.beginPath();
+			context.moveTo(10,50);
+			context.lineTo(200,350);
+			context.lineWidth = 5;
+			context.strokeStyle='blue';
+			context.stroke();
+
+			
+			context.beginPath();
+			context.moveTo(100,50);
+			context.lineTo(300,350);
+			context.lineTo(200,350);
+			context.lineWidth = 5;
+			context.strokeStyle='red';
+			context.stroke();
+
+			context.beginPath();
+			context.moveTo(300,50);
+			context.lineTo(500,350);
+			context.lineTo(500,100);
+			context.moveTo(550,50);
+			context.lineTo(550,350);
+			context.lineWidth = 25;
+			context.strokeStyle='#00FF00';
+			context.stroke();
+
+	}
+	
+	</script>
+
+	</head>
+
+	<body onload="line();">
+		<canvas id="canvas" width="700" height="400" style="border:solid 1px #000000">
+		canvas 사용하기
+		</canvas>
+	</body>
+</html>

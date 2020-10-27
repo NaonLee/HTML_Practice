@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>다각형 그리기</title>
+		<script type="text/javascript">
+	
+		fucntion polygon()
+		{
+			var canvas = document.getElementById('canvas');
+			context = canvas.getContext('2d');
+
+			context.beginPath();
+			context.moveTo(150,10);
+			context.lineTo(80,350);
+			context.lineTo(350,350);
+			context.lineTo(280,10);
+			context.closePath();
+			context.stroke();
+	
+			context.beginPath();
+			context.moveTo(500,10);
+			context.lineTo(350,150);
+			context.lineTo(430,350);
+			context.lineTo(570,350);
+			context.lineTo(650,150);
+			context.closePath();
+			context.fill();
+		}
+		
+	</script>
+
+	</head>
+
+	<body onload="polygon();">
+		<canvas id="canvas" width="700" height="400" style="border:solid 1px #000000">
+		canvas 사용하기
+		</canvas>
+	</body>
+</html>
